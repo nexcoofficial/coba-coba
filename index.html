@@ -3,466 +3,659 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>qsqsqsq - Fashion Premium</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#d4af37',
-                        burgundy: '#8B0000',
-                        cream: '#f5f5f0',
-                        charcoal: '#333333'
-                    },
-                    fontFamily: {
-                        playfair: ['Playfair Display', 'serif'],
-                        poppins: ['Poppins', 'sans-serif']
-                    }
-                }
+    <title>Everyday Everyday Pashmina - ayunda</title>
+    <meta name="description" content="Everyday Pashmina merupakan pashmina instant yang nyaman dipakai sehari-hari. Pashmina ini mudah dibentuk (styling) sesuai keinginan. Cuttingan round pada setiap sisi ikut menambah sentuhan unik pada Everyday Pashmina. Pashmina juga lembut, breathable dan adem karena menggunakan bahan TENCEL™ Modal.">
+    <meta name="keywords" content="Hijab & Busana Muslim, Everyday Everyday Pashmina, ayunda">
+    <meta name="author" content="ayunda">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Everyday Everyday Pashmina - ayunda">
+    <meta property="og:description" content="Everyday Pashmina merupakan pashmina instant yang nyaman dipakai sehari-hari. Pashmina ini mudah dibentuk (styling) sesuai keinginan. Cuttingan round pada setiap sisi ikut menambah sentuhan unik pada Everyday Pashmina. Pashmina juga lembut, breathable dan adem karena menggunakan bahan TENCEL™ Modal.">
+    <meta property="og:image" content="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/DSC06380_1726043002103.jpg">
+    <meta property="og:type" content="product">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #0f766e;
+            --secondary: #14b8a6;
+            --accent: #5eead4;
+            --background: #f0fdfa;
+            --text: #134e4a;
+            --white: #ffffff;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--background);
+            scroll-behavior: smooth;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="white" opacity="0.1"/><circle cx="80" cy="80" r="3" fill="white" opacity="0.05"/><circle cx="40" cy="60" r="1" fill="white" opacity="0.1"/></svg>');
+            animation: float 20s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0px) rotate(360deg); }
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            z-index: 2;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-    </script>
-    <style>
-        .text-shadow {
-            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
         }
-        .testimonial-slider {
-            overflow: hidden;
+        
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .product-image {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin: 2rem auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .price-box {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 2rem;
+            margin: 2rem auto;
+            border: 1px solid rgba(255,255,255,0.2);
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .original-price {
+            text-decoration: line-through;
+            color: rgba(255,255,255,0.7);
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 0.5rem;
+        }
+        
+        .discount-price {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: var(--accent);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, var(--accent), #ffd700);
+            color: var(--primary);
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+            color: var(--primary);
             position: relative;
         }
-        .testimonial-wrapper {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            border-radius: 2px;
         }
-        .testimonial-slide {
-            min-width: 100%;
+        
+        /* Features Grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
         }
+        
         .feature-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px var(--shadow);
+            text-align: center;
             transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
         }
+        
         .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
         }
-        .countdown-item {
-            min-width: 70px;
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .feature-text {
+            color: var(--text);
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        /* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Hijab Colors */
+        .hijab-colors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .color-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .color-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .color-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .color-card-content {
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .color-name {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Order Section */
+        .order-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .order-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .whatsapp-button {
+            background: #25d366;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 1rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .whatsapp-button:hover {
+            background: #128c7e;
+            transform: scale(1.05);
+        }
+        
+        /* Recommendations */
+        .recommendations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .recommendation-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .recommendation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .recommendation-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .recommendation-content {
+            padding: 1.5rem;
+        }
+        
+        .recommendation-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .recommendation-price {
+            font-weight: bold;
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .recommendation-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .recommendation-link:hover {
+            color: var(--secondary);
+        }
+        
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .footer h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 1rem;
+            }
+            
+            .price-box {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            
+            .section {
+                padding: 2rem 1rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .hijab-colors {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            
+            .recommendations {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .whatsapp-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+        
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
     </style>
 </head>
-<body class="bg-cream text-charcoal font-poppins">
+<body>
     <!-- Hero Section -->
-    <section class="relative overflow-hidden">
-        <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair mb-6 text-shadow">
-                        <span class="text-gold">qsqsqsq</span> <br> Fashion Premium
-                    </h1>
-                    <p class="text-xl mb-8 max-w-lg">
-                        Koleksi eksklusif yang memadukan gaya modern dengan kenyamanan premium. 
-                        Desain yang tak terlupakan untuk penampilan sehari-hari.
-                    </p>
-                    <a href="#order-form" class="bg-burgundy hover:bg-red-800 text-white px-8 py-4 rounded-full text-lg font-medium transition duration-300 inline-block">
-                        BELI SEKARANG
-                    </a>
-                </div>
-                <div class="flex justify-center">
-                    <div class="relative">
-                        <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mbbt7zqa5uc967.webp" 
-                             alt="qsqsqsq Premium Fashion" 
-                             class="rounded-xl shadow-2xl max-w-full h-auto border-8 border-white">
-                        <div class="absolute -bottom-4 -right-4 bg-gold text-white py-2 px-6 rounded-full font-bold transform rotate-3">
-                            BEST SELLER
-                        </div>
-                    </div>
-                </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Everyday Everyday Pashmina</h1>
+            <p>Everyday Pashmina merupakan pashmina instant yang nyaman dipakai sehari-hari. Pashmina ini mudah dibentuk (styling) sesuai keinginan. Cuttingan round pada setiap sisi ikut menambah sentuhan unik pada Everyday Pashmina. Pashmina juga lembut, breathable dan adem karena menggunakan bahan TENCEL™ Modal.</p>
+            
+            <img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/DSC06380_1726043002103.jpg" alt="Everyday Everyday Pashmina" class="product-image">
+            
+            <div class="price-box">
+                <div class="original-price">Rp 185000</div>
+                <div class="discount-price">Rp 135000</div>
             </div>
+            
+            <a href="#order" class="cta-button">
+                <i class="fab fa-whatsapp"></i> Pesan Sekarang
+            </a>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold font-playfair text-center mb-16">Keunggulan Produk</h2>
+    <section class="section">
+        <h2 class="section-title">Mengapa Pilih Everyday Everyday Pashmina?</h2>
+        
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-star feature-icon"></i>
+                <h3 class="feature-title">Kualitas Premium</h3>
+                <p class="feature-text"></p>
+            </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="feature-card bg-cream p-8 rounded-xl border border-gray-100 shadow-sm">
-                    <div class="text-gold text-4xl mb-4">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Kualitas Premium</h3>
-                    <p class="text-gray-600">Dibuat dengan bahan berkualitas tinggi untuk kenyamanan maksimal sepanjang hari.</p>
-                </div>
-                
-                <div class="feature-card bg-cream p-8 rounded-xl border border-gray-100 shadow-sm">
-                    <div class="text-gold text-4xl mb-4">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Desain Elegan</h3>
-                    <p class="text-gray-600">Gaya terkini yang cocok untuk berbagai kesempatan dan acara spesial.</p>
-                </div>
-                
-                <div class="feature-card bg-cream p-8 rounded-xl border border-gray-100 shadow-sm">
-                    <div class="text-gold text-4xl mb-4">
-                        <i class="fas fa-check-circle"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Ramah Lingkungan</h3>
-                    <p class="text-gray-600">Dibuat dengan proses ramah lingkungan dan bahan yang bertanggung jawab.</p>
-                </div>
+            <div class="feature-card">
+                <i class="fas fa-shipping-fast feature-icon"></i>
+                <h3 class="feature-title">Pengiriman Cepat</h3>
+                <p class="feature-text">Dikirim langsung dari ayunda dengan packaging premium dan aman</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold font-playfair text-center mb-12">Galeri Produk</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div>
-                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mbbt7zqa5uc967.webp" 
-                         alt="qsqsqsq Fashion" 
-                         class="rounded-xl shadow-xl w-full h-auto">
-                </div>
-                <div>
-                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasc-m36ani697wj358.webp" 
-                         alt="qsqsqsq Fashion Detail" 
-                         class="rounded-xl shadow-xl w-full h-auto">
-                </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt feature-icon"></i>
+                <h3 class="feature-title">Garansi Kualitas</h3>
+                <p class="feature-text">100% original dan bergaransi untuk kepuasan dan kepercayaan Anda</p>
             </div>
         </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold font-playfair text-center mb-12">Mengapa Memilih qsqsqsq?</h2>
-                
-                <div class="space-y-6">
-                    <div class="flex items-start">
-                        <div class="bg-gold rounded-full p-2 mr-4 mt-1">
-                            <i class="fas fa-check text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">Kenyamanan Tak Terkalahkan</h3>
-                            <p class="text-gray-600">Dengan bahan khusus yang bernapas dan elastis, produk kami memberikan kenyamanan sepanjang hari tanpa mengorbankan gaya.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <div class="bg-gold rounded-full p-2 mr-4 mt-1">
-                            <i class="fas fa-check text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">Tahan Lama</h3>
-                            <p class="text-gray-600">Kualitas jahitan premium dan bahan terpilih memastikan produk kami tetap dalam kondisi terbaik bahkan setelah pemakaian berulang.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <div class="bg-gold rounded-full p-2 mr-4 mt-1">
-                            <i class="fas fa-check text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2">Gaya Serbaguna</h3>
-                            <p class="text-gray-600">Desain yang elegan namun praktis, cocok untuk acara formal maupun santai. Tampil sempurna di setiap kesempatan.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-16 bg-cream">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold font-playfair text-center mb-16">Apa Kata Pelanggan</h2>
+        
+        
+        <h3 class="section-title" style="font-size: 2rem; margin-top: 4rem;">Pilihan Warna Tersedia</h3>
+        <div class="hijab-colors">
             
-            <div class="testimonial-slider max-w-4xl mx-auto">
-                <div class="testimonial-wrapper" id="testimonial-wrapper">
-                    <div class="testimonial-slide px-4">
-                        <div class="bg-white p-8 rounded-xl shadow-md">
-                            <div class="text-gold text-3xl mb-4">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-                            <p class="text-lg italic mb-6">
-                                "Produknya bagus dan elegan. Bahan sangat nyaman dipakai seharian. 
-                                Pengiriman juga cepat sekali, packingnya sangat aman."
-                            </p>
-                            <div class="flex items-center">
-                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"></div>
-                                <div class="ml-4">
-                                    <p class="font-bold">Dewi A.</p>
-                                    <p class="text-sm text-gray-500">Jakarta</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-slide px-4">
-                        <div class="bg-white p-8 rounded-xl shadow-md">
-                            <div class="text-gold text-3xl mb-4">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-                            <p class="text-lg italic mb-6">
-                                "Pengiriman cepat dan aman. Desainnya sangat stylish dan kualitasnya di atas ekspektasi. 
-                                Saya sudah membeli beberapa warna karena sangat puas."
-                            </p>
-                            <div class="flex items-center">
-                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"></div>
-                                <div class="ml-4">
-                                    <p class="font-bold">Budi S.</p>
-                                    <p class="text-sm text-gray-500">Bandung</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-slide px-4">
-                        <div class="bg-white p-8 rounded-xl shadow-md">
-                            <div class="text-gold text-3xl mb-4">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-                            <p class="text-lg italic mb-6">
-                                "Kualitas benar-benar premium seperti deskripsi. Saya sudah memakainya beberapa kali 
-                                dan tetap terlihat baru. Sangat rekomended untuk fashionista!"
-                            </p>
-                            <div class="flex items-center">
-                                <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"></div>
-                                <div class="ml-4">
-                                    <p class="font-bold">Rina M.</p>
-                                    <p class="text-sm text-gray-500">Surabaya</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="color-card" onclick="selectColor('Oat')">
+                    <img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/id-11134207-7r991-lt7vlxmtfyrx5f_1746687448701.jpeg" alt="Oat">
+                    <div class="color-card-content">
+                        <div class="color-name">Oat</div>
                     </div>
                 </div>
-                
-                <div class="flex justify-center mt-8">
-                    <button id="prev-testimonial" class="mx-2 text-gold hover:text-burgundy text-2xl">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button id="next-testimonial" class="mx-2 text-gold hover:text-burgundy text-2xl">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
+            
+                <div class="color-card" onclick="selectColor('Jet Black')">
+                    <img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/id-11134207-7r98s-lt7vlxmtd5n11d_1746687448699.jpeg" alt="Jet Black">
+                    <div class="color-card-content">
+                        <div class="color-name">Jet Black</div>
+                    </div>
                 </div>
-            </div>
+            
+                <div class="color-card" onclick="selectColor('Broken White')">
+                    <img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/id-11134207-7r98z-lt7vlxmtbr2lb6_1746687448696.jpeg" alt="Broken White">
+                    <div class="color-card-content">
+                        <div class="color-name">Broken White</div>
+                    </div>
+                </div>
+            
+                <div class="color-card" onclick="selectColor('Almond')">
+                    <img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/id-11134207-7r98q-lt7vlxmtek7hab_1746687448690.jpeg" alt="Almond">
+                    <div class="color-card-content">
+                        <div class="color-name">Almond</div>
+                    </div>
+                </div>
+            
+                <div class="color-card" onclick="selectColor('Mauve')">
+                    <img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/_0001_Dusty_Pink_1746689021169.jpg" alt="Mauve">
+                    <div class="color-card-content">
+                        <div class="color-name">Mauve</div>
+                    </div>
+                </div>
+            
+        </div>
+        
+        
+        
+        <h3 class="section-title" style="font-size: 2rem; margin-top: 4rem;">Galeri Produk</h3>
+        <div class="gallery">
+            <img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/id-11134207-7r98v-lt7ufrmiwj0m4c_1746687446325.jpg" alt="Everyday Everyday Pashmina" loading="lazy"><img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/id-11134207-7r98v-lt7ufrmixxl267_1746687446455.jpg" alt="Everyday Everyday Pashmina" loading="lazy"><img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/id-11134207-7r98w-lt7ufrmj4yfa52_1746687446543.jpg" alt="Everyday Everyday Pashmina" loading="lazy"><img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/id-11134207-7r98x-lt7vlxmtaci548_1746687446633.jpg" alt="Everyday Everyday Pashmina" loading="lazy"><img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/id-11134207-7r98u-lt7ufrmj25aed7_1746687446993.jpg" alt="Everyday Everyday Pashmina" loading="lazy"><img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/id-11134207-7r98u-lt7ufrmj3juu9d_1746687447111.jpg" alt="Everyday Everyday Pashmina" loading="lazy">
+        </div>
+        
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-section" id="order">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 2rem;">
+            Pesan Everyday Everyday Pashmina Sekarang!
+        </h2>
+        
+        <div class="order-form">
+            <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="mila" data-product-slug="aqila-modest-wear" data-product-id="6853fd01de518d26a2057242" id="oo-embed-form-aqila-modest-wear-7893" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://mila.orderonline.id'); ooe('init', '5f1a7b8fa9bf807da24d83bb', '6853fd01de518d26a2057242', '6853fd01de518d26a2057243', 'oo-embed-form-aqila-modest-wear-7893', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code -->
         </div>
     </section>
 
-    <!-- Pricing & CTA Section -->
-    <section class="py-16 relative">
-        <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://down-id.img.susercontent.com/file/id-11134207-7rasc-m36ani697wj358.webp');"></div>
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div class="md:flex">
-                    <div class="md:w-1/2 bg-gradient-to-br from-gold to-burgundy p-10 text-white">
-                        <h2 class="text-3xl font-bold font-playfair mb-4">Penawaran Spesial</h2>
-                        <div class="mb-6">
-                            <div class="text-5xl font-bold">Rp <span id="current-price">200.000</span></div>
-                            <div class="text-xl line-through opacity-80">Rp 300.000</div>
-                        </div>
-                        
-                        <div class="mb-8">
-                            <h3 class="text-xl font-bold mb-4">Hanya 24 Jam!</h3>
-                            <div class="flex space-x-4 mb-4">
-                                <div class="countdown-item text-center bg-black bg-opacity-30 rounded-lg py-2 px-3">
-                                    <div id="hours" class="text-2xl font-bold">00</div>
-                                    <div class="text-sm">Jam</div>
-                                </div>
-                                <div class="countdown-item text-center bg-black bg-opacity-30 rounded-lg py-2 px-3">
-                                    <div id="minutes" class="text-2xl font-bold">00</div>
-                                    <div class="text-sm">Menit</div>
-                                </div>
-                                <div class="countdown-item text-center bg-black bg-opacity-30 rounded-lg py-2 px-3">
-                                    <div id="seconds" class="text-2xl font-bold">00</div>
-                                    <div class="text-sm">Detik</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <ul class="space-y-2">
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <span>Garansi kepuasan 30 hari</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <span>Gratis ongkir seluruh Indonesia</span>
-                            </li>
-                            <li class="flex items-center">
-                                <i class="fas fa-check-circle mr-2"></i>
-                                <span>Packing premium</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="md:w-1/2 p-10">
-                        <h3 class="text-2xl font-bold font-playfair mb-2">Dapatkan qsqsqsq Sekarang</h3>
-                        <p class="text-gray-600 mb-6">Tingkatkan gaya Anda dengan produk fashion premium kami.</p>
-                        
-                        <div class="mb-6">
-                            <div class="flex items-center mb-2">
-                                <div class="w-12 h-12 bg-gray-200 border-2 border-dashed rounded-xl"></div>
-                                <div class="ml-4">
-                                    <p class="font-bold">qsqsqsq Premium</p>
-                                    <p class="text-sm text-gray-600">Fashion Terbaik</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <a href="#order-form" class="block w-full bg-burgundy hover:bg-red-800 text-white text-center py-4 px-6 rounded-full text-lg font-medium transition duration-300 mb-4">
-                            <i class="fas fa-shopping-cart mr-2"></i> BELI SEKARANG
-                        </a>
-                        
-                        <div class="flex items-center justify-center text-sm mt-4">
-                            <i class="fas fa-shield-alt text-gold mr-2"></i>
-                            <span>Pembayaran 100% Aman</span>
-                        </div>
+    
+    <!-- Recommendations Section -->
+    <section class="section">
+        <h2 class="section-title">🛍️ Rekomendasi Lainnya</h2>
+        
+        <div class="recommendations">
+            
+                <div class="recommendation-card">
+                    <div class="badge">New</div>
+                    <img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/_0003_DSC05354_1734676176255.jpg" alt="Mira Inner Pahmina" loading="lazy">
+                    <div class="recommendation-content">
+                        <h4 class="recommendation-name">Mira Inner Pahmina</h4>
+                        <p class="recommendation-price">Rp 145000</p>
+                        <a href="https://mira.ayunda.xyz/" class="recommendation-link">Lihat Detail →</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Order Form Section -->
-    <section id="order-form" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold font-playfair text-center mb-2">Pesan Sekarang</h2>
-                <p class="text-gray-600 text-center mb-10">Isi formulir di bawah untuk memesan produk kami</p>
-                
-                <div class="ooef">
-                    <form class="orderonline-embed-form" data-username="mila" data-product-slug="00-footage-produk-2" data-product-id="68599c736e90c0d6d600305b" id="oo-embed-form-00-footage-produk-2-4842" data-origin="orderonline">
-                        <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div>
-                    </form>
+            
+                <div class="recommendation-card">
+                    <div class="badge">Best Seller</div>
+                    <img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/_0003_DSC05354_1734676176255.jpg" alt="Mira Inner Pahmina" loading="lazy">
+                    <div class="recommendation-content">
+                        <h4 class="recommendation-name">Mira Inner Pahmina</h4>
+                        <p class="recommendation-price">Rp 145000</p>
+                        <a href="https://mira.ayunda.xyz/" class="recommendation-link">Lihat Detail →</a>
+                    </div>
                 </div>
-                <script>
-                    if (typeof xLogError != 'function') {
-                        var xLogError = function (error) {
-                            var req = new XMLHttpRequest();
-                            var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
-                            var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
-                            req.open('POST', 'https://api.orderonline.id/log', true);
-                            req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                            req.send(params);
-                        };
-                    }
-                    try {
-                        if (typeof xEmbedScript != 'function') {
-                            var xEmbedScript = function () {
-                                !function(w, d, e, v, id, t, s) {
-                                    if (d.getElementById(id)) return;
-                                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
-                                    s = d.getElementsByTagName(e)[0];
-                                    s.parentNode.insertBefore(t, s);
-                                }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
-                            };
-                        }
-                        if (typeof xEmbedInit != 'function') {
-                            var xEmbedInit = function (w, n) {
-                                if (w.ooe) return;
-                                n = w.ooe = function() {
-                                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-                                };
-                                if (!w._ooe) w._ooe = n;
-                                n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
-                            };
-                        }
-                        xEmbedInit(window);
-                        ooe('setup', 'redirect', 'https://mila.orderonline.id');
-                        ooe('init', '5f1a7b8fa9bf807da24d83bb', '68599c736e90c0d6d600305b', '68599c736e90c0d6d600305c', 'oo-embed-form-00-footage-produk-2-4842', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false});
-                        if (!window.jQuery) {
-                            !function(w, d, e, v, id, t, s) {
-                                if (d.getElementById(id)) return;
-                                t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
-                                t.addEventListener('load', xEmbedScript);
-                                s = d.getElementsByTagName(e)[0];
-                                s.parentNode.insertBefore(t, s);
-                            }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
-                        } else {
-                            xEmbedScript();
-                        }
-                    } catch (e) {
-                        xLogError(e);
-                        throw e;
-                    }
-                </script>
-            </div>
+            
+                <div class="recommendation-card">
+                    <div class="badge">Limited</div>
+                    <img src="https://d2kchovjbwl1tk.cloudfront.net/vendor/5812/product/_0003_DSC05354_1734676176255.jpg" alt="Mira Inner Pahmina" loading="lazy">
+                    <div class="recommendation-content">
+                        <h4 class="recommendation-name">Mira Inner Pahmina</h4>
+                        <p class="recommendation-price">Rp 145000</p>
+                        <a href="https://mira.ayunda.xyz/" class="recommendation-link">Lihat Detail →</a>
+                    </div>
+                </div>
+            
         </div>
     </section>
+    
 
     <!-- Footer -->
-    <footer class="py-10 bg-charcoal text-white">
-        <div class="container mx-auto px-4 text-center">
-            <p>© 2023 qsqsqsq Fashion Premium. All rights reserved.</p>
-            <p class="mt-2 text-gray-400">Designed with <i class="fas fa-heart text-red-500"></i> in Indonesia</p>
+    <footer class="footer">
+        <h3>ayunda</h3>
+        <p>Terima kasih telah mempercayai produk berkualitas dari kami</p>
+        <div>
+            <a href="https://wa.me/6281324367650" class="whatsapp-button">
+                <i class="fab fa-whatsapp"></i> Hubungi Kami
+            </a>
         </div>
+        <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.7;">
+            © 2025 ayunda. All rights reserved.
+        </p>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Testimonial Slider
-        let testimonialIndex = 0;
-        const testimonials = document.querySelectorAll('.testimonial-slide');
-        const sliderWrapper = document.getElementById('testimonial-wrapper');
-        const slideCount = testimonials.length;
-        
-        function showTestimonial(index) {
-            if (index < 0) {
-                testimonialIndex = slideCount - 1;
-            } else if (index >= slideCount) {
-                testimonialIndex = 0;
-            } else {
-                testimonialIndex = index;
-            }
-            
-            sliderWrapper.style.transform = `translateX(-${testimonialIndex * 100}%)`;
-        }
-        
-        document.getElementById('prev-testimonial').addEventListener('click', () => {
-            showTestimonial(testimonialIndex - 1);
-        });
-        
-        document.getElementById('next-testimonial').addEventListener('click', () => {
-            showTestimonial(testimonialIndex + 1);
-        });
-        
-        // Auto slide testimonials
-        setInterval(() => {
-            showTestimonial(testimonialIndex + 1);
-        }, 5000);
-        
-        // Countdown Timer
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const tomorrow = new Date();
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            tomorrow.setHours(0, 0, 0, 0);
-            
-            const distance = tomorrow - now;
-            
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-        }
-        
-        // Initial call
-        updateCountdown();
-        // Update every second
-        setInterval(updateCountdown, 1000);
-        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -473,6 +666,93 @@
                 }
             });
         });
+
+        // Color selection function for hijab
+        function selectColor(colorName) {
+            const message = `Halo ayunda, saya tertarik dengan Everyday Everyday Pashmina warna ${colorName}. Bisa info harga dan ketersediaan?`;
+            const whatsappUrl = `https://wa.me/6281324367650?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Parallax effect for hero section
+        let ticking = false;
+        function updateParallax() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                const parallax = scrolled * 0.3;
+                hero.style.transform = `translateY(${parallax}px)`;
+            }
+            ticking = false;
+        }
+
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestTick);
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.feature-card, .color-card, .recommendation-card, .gallery img');
+            animateElements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `all 0.6s ease ${index * 0.1}s`;
+                observer.observe(el);
+            });
+        });
+
+        // Add loading states to images
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.addEventListener('load', () => {
+                    img.style.opacity = '1';
+                });
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.3s ease';
+            });
+        });
+
+        // Performance optimization: Lazy loading
+        if ('loading' in HTMLImageElement.prototype) {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                img.src = img.src;
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js';
+            script.onload = () => {
+                const observer = lozad();
+                observer.observe();
+            };
+            document.head.appendChild(script);
+        }
+
+        console.log('🚀 Landing Page loaded successfully!');
+        console.log('📱 Product: Everyday Everyday Pashmina');
+        console.log('🏪 Store: ayunda');
     </script>
 </body>
 </html>
